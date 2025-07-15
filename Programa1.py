@@ -51,28 +51,44 @@ alguien.update({"hobby":"pescar"})
 print("creo que puedo añadrie informacion extra con ",alguien.items())
 """
 #SETS
-"""""
+
 Primerset={1,2,3}
 segundoSet=set([3,4,5,6])
 #operaciones con conjuntos
 union=Primerset | segundoSet
-print(Primerset)
-print(segundoSet)
-print("la union de los conjuntos es", union)
-print("La interseccion de los conjuntos es", Primerset&segundoSet)
-print("La diferencia simetrica o los conjuntos no compartidos es", Primerset^segundoSet)
+#print(Primerset)
+#print(segundoSet)
+#print("la union de los conjuntos es", union)
+#print("La interseccion de los conjuntos es", Primerset&segundoSet)
+#print("La diferencia simetrica o los conjuntos no compartidos es", Primerset^segundoSet)
 #metodos
 segundoSet.add(8)
-print(segundoSet)
+#print(segundoSet)
 Primerset.remove(1)
-print(Primerset)
-"""
+#print(Primerset)
+
 
 #Funciones
 
 def sumar(a,b):
-    print(f"la sumas ee, {a+b}")
+    #print(f"la sumas ee, {a+b}")
     return a+b
 sumando=sumar(3,78)
-print(f"si guardarmos una varible a retornar aqui se imprime{sumando}")
+#print(f"si guardarmos una varible a retornar aqui se imprime{sumando}")
 
+#manejo de excepciones
+
+def dividir(x,y):
+    try:
+        x/y
+       # return x/y
+    except(ZeroDivisionError):
+        print("Error, se esta dividiendo por cero")
+    except(TypeError):
+        print("Error, Introduce solo numeros")
+    else:
+        print(f"el resultado es",x/y)
+    finally:
+        print("Tarea terminada")
+
+print(dividir(12,2))
